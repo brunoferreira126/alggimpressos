@@ -1,0 +1,160 @@
+/* ===========================
+   SEÇÃO SOBRE — COM FUNDO DO HERO
+=========================== */
+
+.sobre-section {
+  width: 100%;
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #008e83 0%, #00a89b 40%, #f09f00 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Shapes decorativos */
+.sobre-section::before,
+.sobre-section::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  background: rgba(255, 255, 255, 0.07);
+  border-radius: 20px;
+  transform: rotate(25deg);
+}
+
+.sobre-section::before {
+  top: -80px;
+  left: -40px;
+}
+
+.sobre-section::after {
+  bottom: -80px;
+  right: -40px;
+}
+
+.sobre-container {
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* ---------------------------
+   TEXTO
+--------------------------- */
+.sobre-texto {
+  flex: 1;
+  min-width: 320px;
+  color: white;
+}
+
+.sobre-title {
+  font-size: 3rem;
+  font-weight: 900;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.sobre-title span {
+  color: #ffe3b2;
+}
+
+.sobre-texto p {
+  font-size: 1.15rem;
+  line-height: 1.55;
+  margin-bottom: 1rem;
+  color: #f8f8f8;
+}
+
+/* ---------------------------
+   CARROSSEL
+--------------------------- */
+/* ---------------------------
+   CARROSSEL
+--------------------------- */
+.sobre-carousel {
+  flex: 1;
+  min-width: 320px;
+  max-width: 480px;
+  overflow: hidden;
+  border-radius: 16px;
+  border: 3px solid #ffffff;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  position: relative;
+}
+
+.sobre-carousel-track {
+  display: flex;
+  width: max-content;
+}
+
+.carousel-img {
+  flex: 0 0 auto;
+  width: 100%;
+  max-width: 480px;
+  height: 300px;
+  object-fit: cover;
+  user-select: none;
+  pointer-events: none;
+  border-radius: 0;
+}
+
+/* 🟢 Ajuste automático em telas pequenas */
+@media (max-width: 768px) {
+  .sobre-carousel {
+    max-width: 90%;
+  }
+
+  .carousel-img {
+    height: 220px;
+  }
+}
+
+/* ---------------------------
+   ANIMAÇÃO DE ENTRADA
+--------------------------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: all 0.8s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ---------------------------
+   RESPONSIVIDADE
+--------------------------- */
+@media (max-width: 1024px) {
+  .sobre-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .sobre-texto {
+    order: 2;
+  }
+
+  .sobre-carousel {
+    order: 1;
+    max-width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-img {
+    height: 250px;
+  }
+
+  .sobre-title {
+    font-size: 2.2rem;
+  }
+
+  .sobre-texto p {
+    font-size: 1rem;
+  }
+}

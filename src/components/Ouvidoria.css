@@ -1,0 +1,117 @@
+/* ===========================
+   SEÇÃO OUVIDORIA
+=========================== */
+
+.ouvidoria-section {
+  width: 100%;
+  padding: 6rem 2rem;
+  text-align: center;
+  background: linear-gradient(135deg, #008e83 0%, #00a89b 40%, #f09f00 100%);
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+/* shapes sutis, como no hero/sobre */
+.ouvidoria-section::before,
+.ouvidoria-section::after {
+  content: "";
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  transform: rotate(25deg);
+}
+
+.ouvidoria-section::before {
+  top: -60px;
+  left: -40px;
+}
+
+.ouvidoria-section::after {
+  bottom: -60px;
+  right: -40px;
+}
+
+/* container centralizado */
+.ouvidoria-container {
+  max-width: 800px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* título */
+.ouvidoria-title {
+  font-size: 3rem;
+  font-weight: 900;
+  margin-bottom: 1rem;
+}
+
+.ouvidoria-title span {
+  color: #ffe3b2;
+}
+
+/* texto */
+.ouvidoria-text {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  color: #f9f9f9;
+}
+
+/* botão */
+.ouvidoria-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: white;
+  color: #008e83;
+  font-weight: 700;
+  padding: 0.9rem 1.8rem;
+  border-radius: 12px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transition: all 0.3s ease;
+}
+
+.ouvidoria-button:hover {
+  transform: scale(1.05);
+  background: #ffe3b2;
+  color: #008e83;
+}
+
+.ouvidoria-icon {
+  width: 22px;
+  height: 22px;
+}
+
+/* animação do useReveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(35px);
+  transition: all 0.8s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* responsividade */
+@media (max-width: 768px) {
+  .ouvidoria-title {
+    font-size: 2.4rem;
+  }
+
+  .ouvidoria-text {
+    font-size: 1.05rem;
+  }
+
+  .ouvidoria-button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}

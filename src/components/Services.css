@@ -1,0 +1,183 @@
+/* ==============================
+      SESSÃO SERVICES
+============================== */
+
+.services-section {
+  width: 100%;
+  padding: 5rem 2rem;
+  background: linear-gradient(135deg, #ffffff, #f6f6f6);
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+/* ==============================
+      ANIMAÇÕES useReveal()
+============================== */
+
+.fade-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: 0.8s ease;
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0) !important;
+}
+
+/* ==============================
+      TÍTULO
+============================== */
+
+.services-title {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 3.2rem;
+  color: #008e83;
+}
+
+.services-title span {
+  color: #f09f00;
+}
+
+/* ==============================
+      GRID
+============================== */
+
+.services-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+}
+
+/* ==============================
+      CARD PREMIUM
+============================== */
+
+.service-card {
+  background: #ffffff;
+  padding: 1.8rem;
+  border-radius: 16px;
+  border: 2px solid #008e83;
+  overflow: hidden;
+  transition: 0.35s ease;
+  box-shadow: 0 8px 18px rgba(0, 142, 131, 0.15);
+  cursor: pointer;
+}
+
+/* Efeito hover elegante */
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 32px rgba(0, 142, 131, 0.25);
+}
+
+/* ==============================
+      IMAGEM
+============================== */
+
+.service-img-wrapper {
+  width: 100%;
+  height: 180px;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #f09f00;
+}
+
+.service-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* ==============================
+      NOME
+============================== */
+
+.service-name {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #008e83;
+  letter-spacing: -0.5px;
+}
+
+/* ===== Outros serviços (card) ===== */
+.other-card {
+  cursor: pointer;
+  text-align: center;
+}
+.other-card .service-sub {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 0.4rem;
+}
+
+/* icone dentro do card */
+.other-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(0,142,131,0.06), rgba(240,159,0,0.03));
+  border-radius: 12px;
+  padding: 0.6rem;
+}
+.other-icon svg { color: #008e83; }
+
+/* ===== Modal ===== */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1.5rem;
+}
+
+.modal-card {
+  width: 100%;
+  max-width: 720px;
+  background: white;
+  border-radius: 12px;
+  padding: 1.6rem;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.25);
+  position: relative;
+}
+
+.modal-close {
+  position: absolute;
+  right: 12px;
+  top: 8px;
+  border: none;
+  background: transparent;
+  font-size: 1.6rem;
+  cursor: pointer;
+  color: #666;
+}
+
+.modal-card h3 {
+  margin: 0 0 .4rem 0;
+  color: #008e83;
+  font-size: 1.4rem;
+}
+
+.modal-intro {
+  color: #444;
+  margin-bottom: .8rem;
+}
+
+.modal-list {
+  columns: 2;
+  gap: 1.2rem;
+  list-style: disc;
+  padding-left: 1.25rem;
+  color: #333;
+}
+@media (max-width: 640px) {
+  .modal-list { columns: 1; }
+}

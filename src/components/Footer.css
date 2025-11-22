@@ -1,0 +1,176 @@
+/* ===============================
+   FOOTER — ESTILOS PRINCIPAIS
+================================ */
+
+.footer-section {
+  position: relative;
+  width: 100%;
+  background: #f3f3f3;
+  padding: 4rem 1.5rem 2rem;
+  overflow: hidden;
+}
+
+/* Shapes decorativos */
+.footer-shape {
+  position: absolute;
+  opacity: 0.15;
+  filter: blur(50px);
+  border-radius: 50%;
+}
+
+.shape1 {
+  width: 350px;
+  height: 350px;
+  background: #008e83;
+  top: -80px;
+  left: -80px;
+}
+
+.shape2 {
+  width: 350px;
+  height: 350px;
+  background: #0084ff;
+  bottom: -80px;
+  right: -80px;
+}
+
+/* ===============================
+   CONTAINER PRINCIPAL
+================================ */
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+/* ===============================
+   BRAND
+================================ */
+
+.footer-brand h2 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.footer-brand h2 span {
+  color: #008e83;
+}
+
+.footer-brand p {
+  max-width: 260px;
+  margin-top: 0.6rem;
+  color: #444;
+  font-size: 1rem;
+}
+
+/* ===============================
+   LINKS (apenas nomes)
+================================ */
+
+.footer-links h3,
+.footer-contact h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.7rem;
+  color: #222;
+  font-weight: 600;
+}
+
+.footer-links-plain {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem 0.8rem;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 0.5rem;
+}
+
+.footer-links-plain span {
+  display: inline-block;
+  color: #333;
+  font-size: 0.95rem;
+  padding: 0.18rem 0.45rem;
+  border-radius: 6px;
+  background: transparent;
+  cursor: default;
+}
+
+/* ===============================
+   CONTATO
+================================ */
+
+.footer-contact p {
+  margin: 0.3rem 0;
+  color: #333;
+}
+
+.footer-icon {
+  margin-right: 0.3rem;
+}
+
+.plain-link {
+  color: #333;
+  text-decoration: none;
+}
+
+.plain-link:hover {
+  text-decoration: underline;
+}
+
+/* Botões */
+.footer-btn {
+  display: inline-block;
+  padding: 0.45rem 0.9rem;
+  background: #008e83;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: 0.2s ease;
+}
+
+.footer-btn:hover {
+  opacity: 0.8;
+}
+
+/* ===============================
+   RODAPÉ INFERIOR
+================================ */
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 2.8rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.footer-bottom p {
+  color: #444;
+  font-size: 0.9rem;
+}
+
+/* ===============================
+   RESPONSIVIDADE
+================================ */
+
+@media (max-width: 899px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .footer-links-plain {
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .footer-brand p {
+    text-align: center;
+  }
+}

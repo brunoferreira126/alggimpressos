@@ -1,0 +1,117 @@
+/* ===============================
+   SESSÃO CONTATOS
+================================ */
+.contacts-section {
+  position: relative;
+  padding: 5rem 1.5rem;
+  background: linear-gradient(135deg, #ffffff, #f6f6f6);
+  overflow: hidden;
+}
+
+.contacts-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.contacts-title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #008e83;
+  margin-bottom: 0.5rem;
+}
+.contacts-title span { color: #f09f00; }
+
+.contacts-sub {
+  color: #444;
+  margin-bottom: 2rem;
+  font-size: 1.05rem;
+}
+
+/* grid de contatos */
+.contacts-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+  align-items: stretch;
+}
+
+/* cartão individual */
+.contact-card {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  padding: 1.15rem 1.2rem;
+  background: #fff;
+  border: 2px solid rgba(0,142,131,0.12);
+  border-radius: 14px;
+  text-decoration: none;
+  color: #222;
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.contact-card:hover,
+.contact-card:focus {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 50px rgba(0,0,0,0.12);
+  border-color: rgba(0,142,131,0.25);
+}
+
+/* ícone */
+.contact-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(180deg, rgba(0,142,131,0.08), rgba(240,159,0,0.03));
+  color: #008e83;
+  flex: 0 0 64px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+
+/* meta (texto) */
+.contact-meta {
+  text-align: left;
+}
+.contact-title {
+  font-size: 1.05rem;
+  font-weight: 800;
+  color: #008e83;
+}
+.contact-desc {
+  color: #444;
+  margin-top: 0.25rem;
+  font-size: 0.98rem;
+  word-break: break-word;
+}
+
+/* botão auxiliar */
+.contacts-bottom {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+/* shapes de fundo herdando estilo já usado */
+.contacts-section .bg-shape {
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.4;
+  z-index: 0;
+}
+.contacts-section .shape1 { background: #008e83; top: -80px; left: -100px; }
+.contacts-section .shape2 { background: #f09f00; bottom: -80px; right: -100px; }
+
+/* responsividade */
+@media (max-width: 760px) {
+  .contact-icon { width: 56px; height: 56px; flex: 0 0 56px; border-radius: 10px; }
+  .contacts-title { font-size: 1.9rem; }
+  .contact-card { padding: 1rem; }
+}

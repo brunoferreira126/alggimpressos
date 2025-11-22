@@ -1,0 +1,180 @@
+/* =============================
+      SEÇÃO PRINCIPAL
+============================= */
+
+.hero {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Fundo com leve transparência usando a paleta */
+  background: linear-gradient(135deg, #ffffff, #f6f6f6);
+  overflow: hidden;
+}
+
+/* =============================
+     SHAPES SUAVES AO FUNDO
+============================= */
+
+.bg-shape {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  filter: blur(110px);
+  opacity: 0.4;
+  z-index: 0;
+}
+
+/* Verde petróleo */
+.shape1 {
+  background: #008e83;
+  top: -120px;
+  left: -100px;
+}
+
+/* Amarelo da paleta */
+.shape2 {
+  background: #f09f00;
+  bottom: -110px;
+  right: -100px;
+}
+
+/* =============================
+        CONTAINER GERAL
+============================= */
+
+.hero-container {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column; /* MOBILE FIRST */
+  align-items: center;
+  gap: 2.5rem;
+  max-width: 1200px;
+}
+
+/* =============================
+      COLUNA ESQUERDA
+============================= */
+
+.hero-left {
+  text-align: center;
+  max-width: 480px;
+}
+
+.hero-logo {
+  width: 140px;
+  margin-bottom: 1.5rem;
+}
+
+.hero-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #008e83;
+  line-height: 1.2;
+}
+
+.hero-title span {
+  color: #f09f00;
+}
+
+.hero-subtitle {
+  margin-top: 1rem;
+  font-size: 1.1rem;
+  color: #444;
+  opacity: 0.9;
+}
+
+/* BOTÃO */
+.hero-btn {
+  margin-top: 1.8rem;
+  background: #008e83;
+  padding: 1rem 2.2rem;
+  border-radius: 50px;
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #006b63;
+  transform: scale(1.03);
+}
+
+/* =============================
+      COLUNA DIREITA (IMAGEM)
+============================= */
+
+.hero-right {
+  display: flex;
+  justify-content: center;
+}
+
+.image-wrapper {
+  width: 330px;
+  height: 330px;
+  border-radius: 22px;
+
+  /* Borda com a paleta */
+  border: 6px solid #008e83;
+
+  /* Sombra leve elegante */
+  box-shadow: 0 0 25px rgba(0, 142, 131, 0.3);
+
+  overflow: hidden;
+
+  /* Animação suave */
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-11px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* =============================
+        DESKTOP RESPONSIVE
+============================= */
+
+@media (min-width: 1024px) {
+  .hero-container {
+    flex-direction: row;        /* Agora vira 2 colunas */
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;                  /* ↓↓ → IMAGEM + TEXTO MAIS PRÓXIMOS */
+  }
+
+  .hero-left {
+    text-align: left;
+  }
+
+  .hero-title {
+    font-size: 3rem;
+  }
+
+  .image-wrapper {
+    width: 420px;
+    height: 420px;
+    border-width: 8px;
+  }
+}

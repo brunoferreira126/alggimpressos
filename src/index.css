@@ -1,0 +1,48 @@
+/* -------------------------------------------------------
+   RESET GLOBAL + PADRÕES VISUAIS DA ALGG
+   ------------------------------------------------------- */
+
+/* Remove margens e padroniza estilo base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Seta aplicação inteira para ocupar 100% da altura */
+html, body {
+  height: 100%;
+  font-family: 'Inter', sans-serif;
+  background-color: #006f6a; /* Verde petróleo baseado na logo */
+  color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+/* Remove estilo padrão dos links */
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Remove bullets das listas */
+ul {
+  list-style: none;
+}
+
+/* Variáveis de cor — Paleta da ALGG */
+:root {
+  --primary: #006f6a;   /* Verde petróleo */
+  --secondary: #f4a300; /* Laranja */
+  --white: #ffffff;
+  --dark: #1b1b1b;
+}
+
+/* Barra de rolagem customizada tecnológica */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 10px;
+}

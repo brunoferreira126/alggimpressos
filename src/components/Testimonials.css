@@ -1,0 +1,103 @@
+/* ===============================
+   SESSÃO DEPOIMENTOS (APENAS IMAGENS) - IMAGENS MAIORES
+================================ */
+.testimonials-section {
+  position: relative;
+  padding: 6rem 1.5rem;
+  background: linear-gradient(135deg, #ffffff, #f6f6f6);
+  overflow: hidden;
+}
+
+.bg-shape {
+  position: absolute;
+  width: 380px;
+  height: 380px;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.4;
+  z-index: 1;
+  animation: float 10s ease-in-out infinite alternate;
+}
+.shape1 { background: #008e83; top: -120px; left: -100px; }
+.shape2 { background: #f09f00; bottom: -110px; right: -100px; }
+
+@keyframes float {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(40px); }
+}
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 3;
+  text-align: center;
+}
+
+.testimonials-title {
+  font-size: 2.4rem;
+  font-weight: 900;
+  color: #008e83;
+  margin-bottom: 2.25rem;
+}
+.testimonials-title span { color: #f09f00; }
+
+/* CARROSSEL - imagens um pouco maiores */
+.testimonials-carousel {
+  display: flex;
+  gap: 2rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding-bottom: 1.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.testimonials-carousel::-webkit-scrollbar { display: none; }
+
+/* ITEM (cartão simplificado só com imagem) - largura levemente aumentada */
+.testimonial-card {
+  min-width: 360px;
+  max-width: 480px;
+  width: clamp(360px, 42vw, 480px);
+  scroll-snap-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 20px;
+  padding: 0.5rem;
+  transition: transform 0.45s cubic-bezier(.2,.9,.2,1), box-shadow 0.45s;
+}
+
+/* FOTO DO CLIENTE - AUMENTADA */
+.testimonial-photo {
+  width: min(440px, 92%);
+  height: min(440px, 92%);
+  border-radius: 20px;
+  object-fit: cover;
+  display: block;
+  box-shadow: 0 20px 44px rgba(0,0,0,0.14);
+  transform-origin: center;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+  border: 6px solid rgba(255,255,255,0.95);
+  background: #eee;
+}
+
+/* hover suave para destacar */
+.testimonial-card:hover .testimonial-photo,
+.testimonial-card:focus-within .testimonial-photo {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 36px 72px rgba(0,0,0,0.2);
+}
+
+/* REVEAL */
+.fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.8s ease, transform 0.8s ease; }
+.reveal-visible { opacity: 1 !important; transform: translateY(0) !important; }
+
+/* RESPONSIVO: garantir boa visualização em telas pequenas */
+@media (max-width: 640px) {
+  .testimonials-section { padding: 3.5rem 1rem; }
+  .testimonials-title { font-size: 1.8rem; margin-bottom: 1.25rem; }
+  .testimonial-card { width: 92vw; min-width: auto; max-width: none; }
+  .testimonial-photo { width: 92vw; height: 92vw; border-radius: 16px; }
+}
