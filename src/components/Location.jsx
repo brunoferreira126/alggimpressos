@@ -49,7 +49,7 @@ export default function Location() {
             </p>
 
             <a
-              href="https://wa.me/5585989834"
+              href="https://wa.me/5585982103431"
               target="_blank"
               className="location-btn"
             >
