@@ -24,7 +24,7 @@ export default function Sobre() {
 
     const scroll = () => {
       if (!isHoveredOrTouched) {
-        scrollAmount += 0.25; // velocidade suave e leve
+        scrollAmount += 0.7; // velocidade suave e leve
         if (scrollAmount >= track.scrollWidth / 2) {
           scrollAmount = 0; // reinicia suavemente
         }
