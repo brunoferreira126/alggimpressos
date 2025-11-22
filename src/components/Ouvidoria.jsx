@@ -34,7 +34,7 @@ export default function Ouvidoria() {
         </p>
 
         <a
-          href="https://forms.gle/SEU_LINK_DO_GOOGLE_FORMS"
+          href="https://forms.gle/8EUT2KB1sFiumMik9"
           target="_blank"
           rel="noopener noreferrer"
           className="ouvidoria-button"

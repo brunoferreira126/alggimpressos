@@ -38,7 +38,7 @@ export default function Location() {
 
             <p>
               <strong>📍 Endereço:</strong><br />
-              Rua José Rubens de Alcântara, nº 92<br />
+              Rua Padre Ednilson Silva, nº 785<br />
               Pindoretama – CE
             </p>
 

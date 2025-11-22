@@ -8,9 +8,6 @@ import cartoes from "../assets/service/cartoes.png";
 import adesivosImg from "../assets/service/adesivos.jpg";
 import banners from "../assets/service/banners.jpg";
 import fachada from "../assets/service/fachada.jpg";
-
-// novas imagens solicitadas (verifique nomes / pasta)
-import bolsas from "../assets/service/bolsas.png";
 import calendarios from "../assets/service/calendarios.png";
 import cardenetas from "../assets/service/cardenetas.png";
 import chaveiros from "../assets/service/chaveiros.png";
@@ -31,7 +28,7 @@ const servicesList = [
   { title: "Fachadas e Comunicação Visual", img: fachada },
 
   // novos com imagens
-  { title: "Bolsas Personalizadas", img: bolsas },
+  
   { title: "Calendários", img: calendarios },
   { title: "Cadernetas", img: cardenetas },
   { title: "Chaveiros", img: chaveiros },
@@ -44,7 +41,6 @@ const servicesList = [
 const otherServices = [
   "Kits de casamento",
   "Crachás",
-  "Acrílico",
   "Blocos",
   "Agendas",
   "Placas QR Code",
