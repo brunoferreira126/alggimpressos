@@ -10,8 +10,9 @@ import img4 from "../assets/testimonials/4.png";
 import img5 from "../assets/testimonials/5.png";
 import img6 from "../assets/testimonials/6.png";
 import img7 from "../assets/testimonials/7.png";
+import img8 from "../assets/testimonials/8.png";
 
-const images = [img1, img2, img3, img4, img5, img6, img7];
+const images = [img1, img2, img3, img4, img5, img6, img7, img8];
 
 function TestimonialCard({ img, index }) {
   const cardRef = useReveal();
